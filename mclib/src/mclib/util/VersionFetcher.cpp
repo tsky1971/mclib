@@ -10,7 +10,7 @@ namespace util {
 
 VersionFetcher::VersionFetcher(const std::string& host, u16 port)
     : m_Dispatcher(),
-      m_Version(mc::protocol::Version::Minecraft_1_12_2), 
+      m_Version(mc::protocol::Version::Minecraft_1_19_3), 
       m_Forge(&m_Dispatcher, nullptr),
       m_Connection(nullptr),
       m_Host(host),
@@ -29,6 +29,7 @@ void VersionFetcher::OnPingResponse(const json& node) {
         { 338, mc::protocol::Version::Minecraft_1_12_1 },
         { 340, mc::protocol::Version::Minecraft_1_12_2 },
         { 404, mc::protocol::Version::Minecraft_1_13_2 },
+        { 761, mc::protocol::Version::Minecraft_1_19_3 },
     };
 
     auto&& versionNode = node.value("version", json());

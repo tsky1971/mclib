@@ -10,14 +10,14 @@
 #include <iostream>
 
 #ifdef _DEBUG
-#pragma comment(lib, "../Debug/mclibd.lib")
+#pragma comment(lib, "../build64/Debug/mclib.lib")
 #else
-#pragma comment(lib, "../Release/mclib.lib")
+#pragma comment(lib, "../build64/Release/mclib.lib")
 #endif
 
 namespace {
 
-const std::string server("127.0.0.1");
+const std::string server("172.16.81.229");
 const u16 port = 25565;
 const std::string username("testplayer");
 const std::string password("");

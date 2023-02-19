@@ -717,6 +717,7 @@ const std::unordered_map<Version, std::shared_ptr<Protocol>> protocolMap = {
     { Version::Minecraft_1_12_1, std::make_shared<Protocol_1_12_1>(Version::Minecraft_1_12_1, inboundMap_1_12_1) },
     { Version::Minecraft_1_12_2, std::make_shared<Protocol_1_12_1>(Version::Minecraft_1_12_2, inboundMap_1_12_1) },
     { Version::Minecraft_1_13_2, std::make_shared<Protocol_1_13_2>(Version::Minecraft_1_13_2, inboundMap_1_13_2) },
+    { Version::Minecraft_1_19_3, std::make_shared<Protocol_1_13_2>(Version::Minecraft_1_19_3, inboundMap_1_13_2) },
 };
 
 bool Protocol::GetAgnosticId(State state, s32 protocolId, s32& agnosticId) {
@@ -772,6 +773,29 @@ std::string to_string(Version version) {
         { mc::protocol::Version::Minecraft_1_12_1, "1.12.1" },
         { mc::protocol::Version::Minecraft_1_12_2, "1.12.2" },
         { mc::protocol::Version::Minecraft_1_13_2, "1.13.2" },
+        { mc::protocol::Version::Minecraft_1_14, "1.14" },
+        { mc::protocol::Version::Minecraft_1_14_1, "1.14.1" },
+        { mc::protocol::Version::Minecraft_1_14_2, "1.14.2" },
+        { mc::protocol::Version::Minecraft_1_14_3, "1.14.3" },
+        { mc::protocol::Version::Minecraft_1_14_4, "1.14.4" },
+        { mc::protocol::Version::Minecraft_1_15, "1.15" },
+        { mc::protocol::Version::Minecraft_1_15_1, "1.15_1" },
+        { mc::protocol::Version::Minecraft_1_15_2, "1.15_2" },
+        { mc::protocol::Version::Minecraft_1_16, "1.16" },
+        { mc::protocol::Version::Minecraft_1_16_1, "1.16_1" },
+        { mc::protocol::Version::Minecraft_1_16_2, "1.16_2" },
+        { mc::protocol::Version::Minecraft_1_16_3, "1.16_3" },
+        { mc::protocol::Version::Minecraft_1_16_4, "1.16_4" },
+        { mc::protocol::Version::Minecraft_1_17, "1.17" },
+        { mc::protocol::Version::Minecraft_1_17_1, "1.17_1" },
+        //{ mc::protocol::Version::Minecraft_1_17_2, "1.17_2" },
+        { mc::protocol::Version::Minecraft_1_18, "1.18" },
+        //{ mc::protocol::Version::Minecraft_1_18_1, "1.18_1" },
+        { mc::protocol::Version::Minecraft_1_18_2, "1.18_2" },
+        { mc::protocol::Version::Minecraft_1_19, "1.19" },
+        { mc::protocol::Version::Minecraft_1_19_1, "1.19_1" },
+        //{ mc::protocol::Version::Minecraft_1_19_2, "1.19_2" },
+        { mc::protocol::Version::Minecraft_1_19_3, "1.19.3" },
     };
 
     auto iter = mapping.find(version);
